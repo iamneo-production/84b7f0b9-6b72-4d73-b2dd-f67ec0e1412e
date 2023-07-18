@@ -1,0 +1,58 @@
+.terms-container {
+    background-image:url("../assets/terms-bg.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .terms-container-inner{
+    background-color: rgb(216, 181, 135);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-top: 6.5rem;
+
+  }
+  
+  .terms-paragraph {
+    text-align: left;
+  }
+  
+  .terms-title {
+    text-decoration: underline;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .terms-content {
+    max-width: 800px;
+  }
+  
+  .terms-content p {
+    font-size: 1.2rem;
+    color: #5a5a5a;
+    margin-bottom: 2rem;
+  }
+
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .terms-container {
+      padding: 1rem; /* Adjust padding for smaller screens */ /* Adjust margin-top for smaller screens */
+    }
+  
+    .terms-title {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+  
+    .terms-content {
+      max-width: 90%; /* Adjust max-width for smaller screens */
+    }
+  
+    .terms-content p {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }

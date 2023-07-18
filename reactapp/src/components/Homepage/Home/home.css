@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap');
+
+.home{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#text1{
+    font-size:400%;
+    font-weight: bolder;
+    color: gold ;
+    text-shadow:2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #ff0000, -1px -1px #ff0000, 1px -1px #020000, -1px 1px #000000;
+}
+
+#text2{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Pacifico', cursive;
+    font-size:700%;
+    font-weight: bolder;
+    color: gold ;
+    text-shadow:2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+.text2{
+    /* border: 3px solid rgb(255, 106, 106); */
+    /* background-color:rgb(224, 243, 255,0.4); */
+}
+@media only screen and (max-width: 706px) {
+    #text2{
+        font-size:500%;
+        font-weight: bolder;
+        color: gold ;
+        margin-left: 4.5rem;
+        text-shadow:2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+        1px 1px #000000, -1px -1px #000000, 1px -1px #fff, -1px 1px #000000;
+    }
+
+    .out-search{
+        width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .searchbar{
+        border-radius: 10px;
+        opacity: 0.6;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* #text1{
+        font-size:200%;
+        font-weight: bolder;
+        color: gold ;
+        text-shadow:2px 0 #000000, -2px 0 #ffffff, 0 2px #000000, 0 -2px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #000000;
+    } */
+
+}
+
+.searchbar{
+    border-radius: 10px;
+    opacity: 0.6;
+    width: 70%;
+    height: 120%;
+    border:none;
+}
+
+.out-search{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.but-home{
+    height: 120%;
+    width: 20%;
+}

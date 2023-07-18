@@ -1,0 +1,236 @@
+/* AdminDashboard.css */
+
+/* Container */
+.container-fluid {
+    padding: 0;
+    /* height: 100vh; */
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background-color: #343a40;
+    color: #fff;
+    height:100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+  }
+  
+  .sidebar h2 {
+    margin-top: 0;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 10px;
+  }
+  
+  .sidebar ul li {
+    height: 50px;
+    margin-bottom: 20px;
+    border-style: solid;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    /* text-align: center; */
+    border-radius: 7px;
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .sidebar li:hover{
+      background-color:wheat;
+  }
+
+  .sidebar li:hover a {
+    /* text-decoration: underline; */
+    font-size: x-large;
+    color: black !important;
+    font-weight: bolder;
+  }
+
+  .full-page-new {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://wallpaperaccess.com/full/271708.jpg');
+    background-size: cover;
+    overflow-x: hidden;
+  }
+  
+
+  .container-add {
+    /* width:50%; */
+    padding: 20px;
+    border: 1px solid #472803;
+    border-radius: 5px;
+    background-color: rgb(228, 182, 113,0.6);
+  }
+  
+ .content-add{
+    display: flex;
+    /* justify-content:center ; */
+    /* height:100%; */
+ }
+ 
+ .row-add{
+  /* height: 100vh; */
+ }
+
+ .food-order-container {
+    background-color: rgb(229, 200, 160,0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+  
+  .food-order-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width:150%; */
+  }
+  
+  .input-field {
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 430px;
+  }
+  
+  .add-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #45a049;
+  }
+  
+  .order-list {
+    list-style-type: none;
+    padding: 1rem;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255,0.6);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .delete-button {
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* @media only screen and (max-width: 600px) {
+    .container-add {
+      padding: 20px;
+      border: 1px solid #472803;
+      border-radius: 5px;
+      background-color: rgb(228, 182, 113,0.6);
+    }
+
+    .food-order-container {
+      padding: 10px;
+      max-width:100px !important;
+      
+    }
+  
+    .input-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .input-field {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  
+    .add-button {
+      width: 100%;
+    }
+  } */
+  
+
+ 
+  @media only screen and (max-width : 510px){
+    .food-order-container {
+      padding: 10px;
+      /* max-width:50px; */
+      
+    }
+
+    .sidebar{
+      /* margin-top: 3rem; */
+      height: fit-content;
+      position:relative;
+    }
+
+    .content-add{
+      margin: 8%;
+    }
+    .row-add{
+      display: flex;
+      flex-direction: column !important;
+    }
+
+    .input-field{
+      width: 150px;
+    }
+
+    .add-button{
+      /* width: 50px  ; */
+    }
+  }
+  /* @media only screen and (max-width : 768px){
+    .food-order-container {
+      padding: 10px;
+      max-width: 100px !important;
+    }
+
+    .sidebar{
+      height: fit-content;
+    }
+    
+  } */
+
