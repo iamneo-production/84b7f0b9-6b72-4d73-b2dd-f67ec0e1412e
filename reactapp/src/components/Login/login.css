@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+.cont-log{
+    opacity: .95;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+     margin-top: 6%;
+    margin-bottom: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+
+.span-log{
+    font-family: 'Dancing Script', cursive;
+}
+
+.outer-cont-log{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.creativemarket.com/0.1.0/ps/7358661/1820/1213/m1/fpnw/wm1/t2w6rmeyiahpvhqri9nped7g2unvavknu7rmirokyacjph8px5egeiuhpcmaru1c-.jpg?1574658467&s=4edbe8881843f4e3a62814d9fecda7c4');
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+#imge{
+    display: flex;
+    justify-content: center;
+    /* background-image: url('../Register/chef-reg.png'); */
+    background-size: cover;
+}
+
+.card-log{
+    background-color: rgba(255, 215, 146, 0.8) !important;
+}
