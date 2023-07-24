@@ -33,9 +33,18 @@
     display: flex;
     justify-content: center;
     /* background-image: url('../Register/chef-reg.png'); */
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 .card-log{
     background-color: rgba(255, 215, 146, 0.8) !important;
+    /* position:absolute; */
+}
+
+@media only screen and (max-width:510px) {
+    .img-fluid-log{
+        height: auto;
+        max-width: 100%;
+    }
+    
 }

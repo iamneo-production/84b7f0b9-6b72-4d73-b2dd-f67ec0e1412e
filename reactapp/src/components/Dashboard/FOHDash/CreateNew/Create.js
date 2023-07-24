@@ -2,27 +2,76 @@ import React,{ useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './create.css';
 import { Outlet, Link ,useNavigate, redirect } from "react-router-dom";
-import Analysis from '../Analysis/Analysis';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 
-const CreateNew = () => {
+
+const FOHCreateNew = () => {
 
     const [orderItems, setOrderItems] = useState([]);
     const [newItem, setNewItem] = useState('');
     const navigate = useNavigate();
+    const username = 'monish';
+    const password = '862003';
+    const authHeader = `Basic ${btoa(`${username}:${password}`)}`;
+
+    const headers = {
+      'Authorization': authHeader,
+      'Content-Type': 'application/json',
+    };
+    
+
+    const orderCreate =  async (e) => {
+      e.preventDefault();
+      // console.log(orderItems);
+      var size = Object.keys(orderItems).length;
+      // console.log(size);
+      let ordername = orderItems[0];
+      for(let i=1; i < size ; i++){
+          ordername = ordername+","+(orderItems[i]);
+      }
+      // console.log(ordername);
+      const order = {"ordername":ordername};
+      const res = await axios.post("http://localhost:8080/dash/neworder",order,{headers});
+      // console.log(res.data);
+      toast.success("Order created Succesfully!",{
+        theme:"light",
+      });
+    }
+
+    const newOrder = async (e) => {
+      e.preventDefault();
+      window.location.reload();
+    }
 
   const handleClick = (e) => {
-    e.preventDefault(); 
-    navigate("/");
+    e.preventDefault();
+    toast.error('Logged out Successfully !', {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    setTimeout(() => {
+      navigate('/');
+    }, 1700);
   };
   const DashClick = (e) => {
     e.preventDefault(); 
-    navigate("/FOHdash");
+    navigate("/FOH/dash");
   };
-  const AnalysisClick = (e) => {
+  
+  const MenuClick = (e) => {
     e.preventDefault(); 
-    navigate("/analysis");
+    navigate("/FOH/menu");
   };
+  
   
     const handleInputChange = (event) => {
       setNewItem(event.target.value);
@@ -45,10 +94,24 @@ const CreateNew = () => {
 
   return (
     <div className='full-page-new'>
+      <ToastContainer />
+      <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
     <div className="container-fluid">
       <div className="row row-add">
         <div className="col-md-2 bg-dark text-light sidebar">
           <div>
+          <h1><center>Front Of House</center></h1>
           <h2><center>Dashboard</center></h2>
           <ul className="list-unstyled" >
             <li>
@@ -58,10 +121,7 @@ const CreateNew = () => {
               <a href="#neworder" style={{color:'black',fontWeight:'bolder',fontSize:'x-large'}}>New Order</a>
             </li>
             <li>
-              <a href="#products">Menu</a>
-            </li>
-            <li>
-              <a href="#orders" onClick={AnalysisClick}>Analysis</a>
+              <a href="#products" onClick={MenuClick}>Menu</a>
             </li>
           </ul>
             </div>
@@ -96,7 +156,10 @@ const CreateNew = () => {
           </li>
         ))}
       </ul>
-      <button className='btn btn-primary'>Add Order</button>
+      <div className='create-butt'>
+      <button className='btn btn-primary' onClick={orderCreate}>Add Order</button>
+      <button className='btn btn-danger' onClick={newOrder}>New Order</button>
+      </div>
     </div>
         </div>
       </div> 
@@ -107,4 +170,4 @@ const CreateNew = () => {
 };
 
 
-export default CreateNew 
+export default FOHCreateNew

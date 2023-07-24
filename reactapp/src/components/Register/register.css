@@ -6,7 +6,7 @@
     justify-content:start;
     align-items:center;
     margin-top: 5%;
-    /* margin-bottom: %; */
+    margin-bottom: 5%;
     margin-left: 3%;
     margin-right: 3%;
 }
@@ -29,5 +29,20 @@
 }
 
 .card-reg{
-    background-color: rgba(240, 205, 154, 0.6);
+    background-color: rgba(240, 205, 154, 0.6) !important;
+}
+
+.img-fluid-reg{
+    /* height: 90%; */
+    /* width: 210%; */
+    margin-left: 3rem;
+}
+
+@media only screen and (max-width : 510px) {
+    
+    .img-fluid-reg {
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+      }
 }

@@ -62,25 +62,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: whitesmoke;
+    background-color: rgb(241, 225, 198);
     background-size: cover;
     overflow-x: hidden;
   }
   
 
   .container-ana {
-    max-width:fit-content;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #cfe6ff;
-    
+    background-color: #e7b25c;
+    margin-right: 1rem;
+    margin-top: 3%;
+    margin-bottom: 2%;
   }
 
-  
- .container-ana{
-  width: 100%;
- }
 
  .dashboard-container {
     width: 100%;
@@ -105,9 +102,20 @@
     border: 1px solid #ddd;
     padding: 20px;
     height: 200px;
-    border-radius: 4px;
-    background-color: #f7f7f7;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #f4debe;
+    
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  }
+  .dashboard-card:hover {
+    border: 1px solid #ddd;
+    padding: 20px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #ecdfcc;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transition: 1s;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   }
   
   .dashboard-card h3 {
@@ -122,7 +130,15 @@
   
   .buttonStyle {
     /* Add your desired styles here */
-    background-color: blue;
+    background-color: rgb(43, 43, 41);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+  }
+  .buttonStyle:hover {
+    /* Add your desired styles here */
+    background-color: rgb(43, 43, 41);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -146,6 +162,13 @@
     .dashboard-card {
       padding: 16px;
     }
+
+    .row-ana{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   
     .dashboard-card h3 {
       font-size: 20px;
@@ -167,7 +190,12 @@
     .content{
       margin: 0%;
     }
-    
+    .row-ana{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   @media only screen and (max-width : 768px){
     .sidebar{

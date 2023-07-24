@@ -74,6 +74,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #ffe9c7;
+    min-height: fit-content;
   }
   
  .content{
@@ -82,19 +83,28 @@
     padding: 0;
  }
 
+.banner{
+  min-height: fit-content;
+}
+
 .img-fluid{
     height: 25rem;
     width: 100%;
     border-radius: 1px;
 }
 
+.dash-ref{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
   #orders {
     background-image: url('https://static.wixstatic.com/media/16f9b6_5c52725ed13141678912aad860f586f6~mv2.jpg/v1/fill/w_1920,h_1107,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/16f9b6_5c52725ed13141678912aad860f586f6~mv2.jpg');
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
+    min-height: 100vh;
   }
 
   /* Styling for the orders heading */
@@ -164,7 +174,7 @@
       list-style-type: none;
       padding: 0;
       display: grid;
-      grid-template-columns: repeat(2, 1fr) !important;
+      grid-template-columns: repeat(1, 1fr) !important;
       grid-gap: 10px;
     }
     .sidebar{
@@ -188,7 +198,7 @@
       list-style-type: none;
       padding: 0;
       display: grid;
-      grid-template-columns: repeat(1, 1fr) !important;
+      grid-template-columns: repeat(1, 1fr);
       grid-gap: 10px;
     }
     .sidebar{
@@ -218,7 +228,7 @@
       list-style-type: none;
       padding: 0;
       display: grid;
-      grid-template-columns: repeat(2, 1fr) !important;
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
     }
     .sidebar{

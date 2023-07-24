@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './analysis.css';
 import { Outlet, Link ,useNavigate, redirect } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Analysis = () => {
@@ -10,28 +11,57 @@ const Analysis = () => {
 
   const DashClick = (e) => {
     e.preventDefault(); 
-    navigate("/FOHdash");
+    navigate("/admin/dash");
   };
 
   const handleClick = (e) => {
     e.preventDefault(); 
-    navigate("/");
+    toast.error('Logged out Successfully !', {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    setTimeout(() => {
+      navigate('/');
+    }, 1700);
   };
   const NewOrderClick = (e) => {
     e.preventDefault(); 
-    navigate("/neworder");
+    navigate("/admin/neworder");
   };
-  const AnalysisClick = (e) => {
+  const MenuClick = (e) => {
     e.preventDefault(); 
-    navigate("/analysis");
+    navigate("/admin/menu");
+  };
+  const FeedbackClick = (e) => {
+    e.preventDefault(); 
+    navigate("/admin/feedback");
   };
 
   return (
     <div className='full-page-dash-ana'>
+      <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
     <div className="container-fluid">
-      <div className="row">
+      <div className="row row-ana">
         <div className="col-md-2 bg-dark text-light sidebar">
           <div>
+          <h1><center>Admin</center></h1>
           <h2><center>Dashboard</center></h2>
           <ul className="list-unstyled" >
             <li>
@@ -41,10 +71,13 @@ const Analysis = () => {
               <a onClick={NewOrderClick}>New Order</a>
             </li>
             <li>
-              <a>Menu</a>
+              <a onClick={MenuClick}>Menu</a>
             </li>
             <li style={{backgroundColor:'wheat'}}>
               <a href="#orders" style={{color:'black',fontWeight:'bolder',fontSize:'x-large'}}>Analysis</a>
+            </li>
+            <li>
+              <a  onClick={FeedbackClick} >Feedback</a>
             </li>
           </ul>
             </div>
@@ -54,7 +87,6 @@ const Analysis = () => {
         </div>
         <div className="col-10 content-ana">
           <div className="container-ana">
-          <div className='all3'>
       <div className="dashboard-container">
         <h1>Kitchen Display System</h1><br></br>
         <div className="dashboard-grid">
@@ -104,7 +136,6 @@ const Analysis = () => {
             <button className="buttonStyle">Add</button>
           </div>
         </div>
-      </div>
       </div>
         </div>
       </div> 

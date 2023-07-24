@@ -160,6 +160,12 @@
   .delete-button:hover {
     background-color: #c0392b;
   }
+
+  .create-butt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   
   /* @media only screen and (max-width: 600px) {
     .container-add {

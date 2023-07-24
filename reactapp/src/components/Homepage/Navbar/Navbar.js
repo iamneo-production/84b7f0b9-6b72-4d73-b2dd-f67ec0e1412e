@@ -38,9 +38,9 @@ function Navbar() {
         <li class="nav-item">
           <a class="nav-link" onClick={AboutClick}>About</a>
         </li>
-        <li class="nav-item">
+        {/* <li class="nav-item">
           <a class="nav-link" href="#">Menu</a>
-        </li>
+        </li> */}
         <li class="nav-item">
           <a class="nav-link" onClick={ContactClick}>Contact</a>
         </li>
